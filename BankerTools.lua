@@ -21,7 +21,7 @@ local b = w:CreateFolder("Banker Tools")
 b:Toggle("Auto Rob", function(bool)
     shared.togglerob = bool
 end)
-b:Toggle("Van Bag Steal (Being developed)", function(bool)
+b:Toggle("Van Bag Steal", function(bool)
     shared.togglevan = bool
 end)
 
