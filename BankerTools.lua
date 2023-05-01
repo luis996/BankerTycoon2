@@ -35,7 +35,7 @@ b:DestroyGui()
 while wait() do
     if shared.togglerob == true then--dont ask
         for i, v in pairs(workspace:GetChildren()) do
-            if v.Name == "Bank" and v.Purchases:FindFirstChild("MoneyTable") and v.Owner.Value != game.Players.LocalPlayer.name then
+            if v.Name == "Bank" and v.Purchases:FindFirstChild("MoneyTable") and v.Owner.Value ~= game.Players.LocalPlayer.name then
 --found bank!
                 fireclickdetector(v.Purchases.MoneyTable.ClickArea.ClickDetector)
                 wait(0.2)
