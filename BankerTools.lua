@@ -27,6 +27,9 @@ end)
 b:Toggle("Auto Dropped bag steal", function(bool)
     shared.toggledropsteal = bool
 end)
+b:Toggle("Auto grab skate", function(bool)
+    shared.toggleskate = bool
+end)
 
 b:DestroyGui()
 while wait() do
@@ -56,6 +59,13 @@ while wait() do
                 firetouchinterest(v.Handle.TouchInterest)
                 wait(0.2)
                 mybase.Purchases.MoneyTable.ClickArea.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            end
+        end
+    end
+    if shared.toggleskate == true then
+        for i, v in pairs(workspace:GetChildren()) do
+            if v.Name == "Skateboard" then
+                fireclickdetector(v.ClickDetector)
             end
         end
     end
