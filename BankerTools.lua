@@ -24,6 +24,9 @@ end)
 b:Toggle("Van Bag Steal", function(bool)
     shared.togglevan = bool
 end)
+b:Toggle("Auto Dropped bag steal", function(bool)
+    shared.toggledropsteal = bool
+end)
 
 b:DestroyGui()
 while wait() do
@@ -42,6 +45,15 @@ while wait() do
         for i, v in pairs(workspace:GetChildren()) do
             if v.Name == "Van" and v.MoneyBags:FindFirstChild("1") then
                 fireclickdetector(v.MoneyBags["1"].ClickDetector)
+                wait(0.2)
+                mybase.Purchases.MoneyTable.ClickArea.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            end
+        end
+    end
+    if shared.toggledropsteal == true then
+        for i, v in pairs(workspace:GetChildren()) do
+            if v.Name == "Money Bag" then
+                fireclickdetector(v.Handle.ClickDetector)
                 wait(0.2)
                 mybase.Purchases.MoneyTable.ClickArea.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
             end
