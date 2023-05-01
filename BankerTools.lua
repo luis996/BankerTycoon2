@@ -40,8 +40,8 @@ while wait() do
     end
     if shared.togglevan == true then
         for i, v in pairs(workspace:GetChildren()) do
-            if v.Name == "Van" and v.Van.MoneyBags:FindFirstChild("1") then
-                fireclickdetector(v.Van.MoneyBags["1"].ClickDetector)
+            if v.Name == "Van" and v.MoneyBags:FindFirstChild("1") then
+                fireclickdetector(v.MoneyBags["1"].ClickDetector)
                 wait(0.2)
                 mybase.Purchases.MoneyTable.ClickArea.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
             end
