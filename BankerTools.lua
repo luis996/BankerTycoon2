@@ -27,7 +27,7 @@ end)
 b:Toggle("Auto Dropped bag steal", function(bool)
     shared.toggledropsteal = bool
 end)
-b:Toggle("Auto grab skate", function(bool)
+b:Toggle("Auto grab skate (PULL REQUEST!)", function(bool)
     shared.toggleskate = bool
 end)
 
