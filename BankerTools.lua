@@ -53,7 +53,7 @@ while wait() do
     if shared.toggledropsteal == true then
         for i, v in pairs(workspace:GetChildren()) do
             if v.Name == "Money Bag" then
-                fireclickdetector(v.Handle.ClickDetector)
+                firetouchinterest(v.Handle.TouchInterest)
                 wait(0.2)
                 mybase.Purchases.MoneyTable.ClickArea.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
             end
