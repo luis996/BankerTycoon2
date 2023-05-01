@@ -62,11 +62,4 @@ while wait() do
             end
         end
     end
-    if shared.toggleskate == true then
-        for i, v in pairs(workspace:GetChildren()) do
-            if v.Name == "Skateboard" then
-                fireclickdetector(v.ClickDetector)
-            end
-        end
-    end
 end
